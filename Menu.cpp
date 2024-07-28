@@ -40,7 +40,7 @@ void myname()
 
 
      getch();
-     closegraph();
+     
 }
 
 void flag()
@@ -66,7 +66,7 @@ void flag()
 
 
     getch();
-    closegraph();
+    
 }
 
 void hut()
@@ -88,7 +88,7 @@ void hut()
 
 
         getch();
-     closegraph();
+     
 }
 
 void emoji()
@@ -134,7 +134,7 @@ void emoji()
      floodfill(261,251,RED);
 
      getch();
-     closegraph();
+     
 }
 
 void scenary()
@@ -273,7 +273,7 @@ void scenary()
 
 
     getch();
-    closegraph();
+   
 }
 
 void moving_car()
@@ -322,9 +322,6 @@ void moving_car()
          line(160+i,250,190+i,280);
          line(50+i,280,50+i,300);
          line(50+i,280,80+i,250);
-         //setfillstyle(1,GREEN);
-         //floodfill(55+i,180,WHITE);
-
 
 
         //Wheel
@@ -360,7 +357,7 @@ void moving_car()
 }
 
      getch();
-     closegraph();
+    
 }
 
 int main()
@@ -426,5 +423,7 @@ int main()
             outtextxy(200,400,"Invalid choice!");
             break;
         }
+        delay(1000);
+        Menu();
     }
 }
