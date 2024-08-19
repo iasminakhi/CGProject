@@ -14,9 +14,10 @@ void Menu(){
      outtextxy(100,100,"1. Myname.");
      outtextxy(100,150,"2. Flag.");
      outtextxy(100,200,"3. Hut.");
-     outtextxy(100,250,"4. Emoji.");
-     outtextxy(100,300,"5. Scenary.");
-     outtextxy(100,350,"6. Moving Car.");
+     outtextxy(100,250,"4. Mid Point Circle");
+     outtextxy(100,300,"5. Emoji.");
+     outtextxy(100,350,"6. Scenary.");
+     outtextxy(100,400,"7. Moving Car.");
 
 }
 
@@ -89,6 +90,49 @@ void hut()
 
         getch();
      
+}
+
+void midpointcircle()
+{
+    cleardevice();
+
+initwindow(800,800,"Midpointcircle");
+outtextxy(300,100,"Bipasha Iasmin");
+
+int x,y,r;
+cin>>x>>y>>r;
+
+int x1 = 0;
+int y1 = r;
+int p0=1-r;
+putpixel(x,y,7);
+while(x1<y1)
+{
+
+x1++;
+if(p0<0){
+
+p0=p0+(2*x1)+1;
+}
+else{
+y1--;
+p0=p0+(2*x1)+1-(2*y1);
+}
+cout<<x1<<"..."<<y1<<endl;
+
+putpixel(x+x1,y+y1,7);
+putpixel(x+x1,y-y1,7);
+putpixel(x-x1,y+y1,7);
+putpixel(x-x1,y-y1,7);
+putpixel(y+y1,x+x1,7);
+putpixel(y+y1,x-x1,7);
+putpixel(y-y1,x+x1,7);
+putpixel(y-y1,x-x1,7);
+delay(100);
+
+getch();
+closegraph();
+
 }
 
 void emoji()
@@ -403,11 +447,19 @@ int main()
             outtextxy(200,400,"You chose option 4!");
             delay(1000);
             cleardevice();
-            emoji();
+            midpointcircle();
             delay(1000);
             cleardevice();
             break;
         case '5':
+            outtextxy(200,400,"You chose option 4!");
+            delay(1000);
+            cleardevice();
+            emoji();
+            delay(1000);
+            cleardevice();
+            break;
+        case '6':
             outtextxy(200,400,"You chose option 5!");
             delay(1000);
             cleardevice();
@@ -415,7 +467,7 @@ int main()
             delay(1000);
             cleardevice();
             break;
-        case '6':
+        case '7':
             closegraph();
             moving_car();
             break;
