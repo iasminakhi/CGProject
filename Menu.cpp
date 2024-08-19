@@ -9,7 +9,7 @@ void Menu(){
      settextstyle(DEFAULT_FONT, HORIZ_DIR,2);
 
      setfillstyle(1,LIGHTGRAY);
-     bar(50,70,600,400);
+     bar(50,70,600,500);
 
      outtextxy(100,100,"1. Myname.");
      outtextxy(100,150,"2. Flag.");
@@ -134,7 +134,7 @@ getch();
 closegraph();
 
 }
-
+}
 void emoji()
 {
      cleardevice();
