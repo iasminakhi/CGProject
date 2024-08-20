@@ -131,11 +131,12 @@ putpixel(y-y1,x+x1,7);
 putpixel(y-y1,x-x1,7);
 delay(100);
 
+}
 getch();
 closegraph();
 
 }
-}
+
 void emoji()
 {
      cleardevice();
