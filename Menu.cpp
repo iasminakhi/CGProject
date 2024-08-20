@@ -18,6 +18,7 @@ void Menu(){
      outtextxy(100,300,"5. Emoji.");
      outtextxy(100,350,"6. Scenary.");
      outtextxy(100,400,"7. Moving Car.");
+     outtextxy(100,450,"8. Exit.");
 
 }
 
@@ -468,8 +469,16 @@ int main()
             cleardevice();
             break;
         case '7':
-            closegraph();
+            outtextxy(200,400,"You chose option 5!");
+            delay(1000);
+            cleardevice();
             moving_car();
+            delay(1000);
+            cleardevice();
+            break;
+        case '8':
+            closegraph();
+            exit(0);
             break;
         default:
             outtextxy(200,400,"Invalid choice!");
